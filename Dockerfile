@@ -14,4 +14,4 @@ ENV EXECUTIONS_PROCESS=main
 ENV N8N_RUNNERS_ENABLED=true
 ENV HOME=/home/node
 USER node
-CMD ["n8n", "start"]
+CMD ["sh", "-c", "N8N_PORT=${PORT:-5678} n8n start"]
